@@ -1,8 +1,62 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvudlq3fciug"]
+[gd_scene load_steps=7 format=3 uid="uid://dvudlq3fciug"]
 
 [ext_resource type="PackedScene" uid="uid://b4ermmavh66r8" path="res://Player/player.tscn" id="2_h3cex"]
 [ext_resource type="PackedScene" uid="uid://smypk8gocyqp" path="res://World/static_body_2d.tscn" id="2_qyxg6"]
 [ext_resource type="Texture2D" uid="uid://dnm6wamrddvwk" path="res://World/GrassBackground.png" id="3_hpa2l"]
+[ext_resource type="Texture2D" uid="uid://iqen48v8cdeo" path="res://World/DirtTileset.png" id="4_xe0oy"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sds68"]
+texture = ExtResource("4_xe0oy")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_iuvs1"]
+sources/1 = SubResource("TileSetAtlasSource_sds68")
 
 [node name="World" type="Node2D"]
 y_sort_enabled = true
@@ -25,3 +79,7 @@ texture = ExtResource("3_hpa2l")
 offset = Vector2(160, 90)
 region_enabled = true
 region_rect = Rect2(0, 0, 320, 180)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_iuvs1")
+format = 2
